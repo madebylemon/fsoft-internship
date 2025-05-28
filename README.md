@@ -6,7 +6,7 @@ This project fetches exchange rate data from an API and stores it in a PostgreSQ
 - Dockerized Airflow pipeline
 - API integration
 - PostgreSQL storage
-- Optional Telegram CSV export
+- Optional CSV export
 - Power BI dashboard-ready
 
 ## How to Run
