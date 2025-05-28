@@ -1,0 +1,14 @@
+[2025-05-27T02:09:02.009+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: exchange_rate_fetch_dag.create_exchange_rate_table scheduled__2025-05-26T00:00:00+00:00 [queued]>
+[2025-05-27T02:09:02.012+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: exchange_rate_fetch_dag.create_exchange_rate_table scheduled__2025-05-26T00:00:00+00:00 [queued]>
+[2025-05-27T02:09:02.012+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-05-27T02:09:02.017+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): create_exchange_rate_table> on 2025-05-26 00:00:00+00:00
+[2025-05-27T02:09:02.018+0000] {standard_task_runner.py:60} INFO - Started process 186 to run task
+[2025-05-27T02:09:02.020+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'exchange_rate_fetch_dag', 'create_exchange_rate_table', 'scheduled__2025-05-26T00:00:00+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/fetch_exchange_dag.py', '--cfg-path', '/tmp/tmph4q4x308']
+[2025-05-27T02:09:02.021+0000] {standard_task_runner.py:88} INFO - Job 10: Subtask create_exchange_rate_table
+[2025-05-27T02:09:02.036+0000] {task_command.py:423} INFO - Running <TaskInstance: exchange_rate_fetch_dag.create_exchange_rate_table scheduled__2025-05-26T00:00:00+00:00 [running]> on host 888f12edac2c
+[2025-05-27T02:09:02.062+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='exchange_rate_fetch_dag' AIRFLOW_CTX_TASK_ID='create_exchange_rate_table' AIRFLOW_CTX_EXECUTION_DATE='2025-05-26T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-26T00:00:00+00:00'
+[2025-05-27T02:09:02.063+0000] {logging_mixin.py:188} INFO - ✅ Table check/creation completed.
+[2025-05-27T02:09:02.063+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-05-27T02:09:02.066+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=exchange_rate_fetch_dag, task_id=create_exchange_rate_table, execution_date=20250526T000000, start_date=20250527T020902, end_date=20250527T020902
+[2025-05-27T02:09:02.078+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-05-27T02:09:02.084+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

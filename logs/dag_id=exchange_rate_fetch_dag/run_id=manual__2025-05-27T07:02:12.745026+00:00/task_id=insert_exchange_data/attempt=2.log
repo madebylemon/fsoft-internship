@@ -1,0 +1,17 @@
+[2025-05-27T07:07:18.088+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: exchange_rate_fetch_dag.insert_exchange_data manual__2025-05-27T07:02:12.745026+00:00 [queued]>
+[2025-05-27T07:07:18.092+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: exchange_rate_fetch_dag.insert_exchange_data manual__2025-05-27T07:02:12.745026+00:00 [queued]>
+[2025-05-27T07:07:18.092+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 2
+[2025-05-27T07:07:18.096+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): insert_exchange_data> on 2025-05-27 07:02:12.745026+00:00
+[2025-05-27T07:07:18.098+0000] {standard_task_runner.py:60} INFO - Started process 2102 to run task
+[2025-05-27T07:07:18.100+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'exchange_rate_fetch_dag', 'insert_exchange_data', 'manual__2025-05-27T07:02:12.745026+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/fetch_exchange_dag.py', '--cfg-path', '/tmp/tmptm5mygx0']
+[2025-05-27T07:07:18.101+0000] {standard_task_runner.py:88} INFO - Job 30: Subtask insert_exchange_data
+[2025-05-27T07:07:18.118+0000] {task_command.py:423} INFO - Running <TaskInstance: exchange_rate_fetch_dag.insert_exchange_data manual__2025-05-27T07:02:12.745026+00:00 [running]> on host e6eb47a0cbe8
+[2025-05-27T07:07:18.148+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='exchange_rate_fetch_dag' AIRFLOW_CTX_TASK_ID='insert_exchange_data' AIRFLOW_CTX_EXECUTION_DATE='2025-05-27T07:02:12.745026+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-27T07:02:12.745026+00:00'
+[2025-05-27T07:07:18.149+0000] {logging_mixin.py:188} INFO - Looking for file: /opt/***/data_2025-05-27.json
+[2025-05-27T07:07:18.149+0000] {logging_mixin.py:188} INFO - File exists? True
+[2025-05-27T07:07:18.149+0000] {logging_mixin.py:188} INFO - Loaded data keys: dict_keys(['success', 'timestamp', 'base', 'date', 'rates'])
+[2025-05-27T07:07:18.158+0000] {logging_mixin.py:188} INFO - Data inserted/upserted successfully.
+[2025-05-27T07:07:18.159+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-05-27T07:07:18.163+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=exchange_rate_fetch_dag, task_id=insert_exchange_data, execution_date=20250527T070212, start_date=20250527T070718, end_date=20250527T070718
+[2025-05-27T07:07:18.200+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-05-27T07:07:18.210+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
